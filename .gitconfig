@@ -1,22 +1,18 @@
 [user]
 	name = vastness
 	email = 1916286435@qq.com
+
 ; delta config
 [core]
     pager = delta
-
 [interactive]
     diffFilter = delta --color-only --features=interactive
     navigate = true  # use n and N to move between diff sections
-
-
 [delta]
     features = decorations
     line-numbers = true
-
 [delta "interactive"]
     keep-plus-minus-markers = false
-
 [delta "decorations"]
     commit-decoration-style = blue ol
     commit-style = raw
@@ -25,9 +21,7 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
-
 [merge]
     conflictstyle = diff3
-
 [diff]
     colorMoved = default

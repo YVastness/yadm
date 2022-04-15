@@ -121,6 +121,7 @@ alias diff='delta -n'
 alias du='dust'
 alias df='duf'
 alias grep='rg'
+alias lzd='lazydocker'
 alias tmux="TERM=screen-256color-bce tmux"
 # 由于政策原因，所有源自 Debian 的autojump发行版都需要手动激活
 . /usr/share/autojump/autojump.sh
@@ -148,4 +149,5 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 ###starship
 eval "$(starship init zsh)"
-
+###lunarvim
+export PATH="~/.local/bin:$PATH"
