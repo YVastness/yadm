@@ -115,7 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# neovim环境变量
 export EDITOR=/usr/bin/nvim
 
+# fzf环境变量
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# cargo环境变量
 . "$HOME/.cargo/env"
