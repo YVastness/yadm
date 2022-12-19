@@ -145,9 +145,21 @@ export FZF_COMPLETION_TRIGGER='\'
 export FZF_PREVIEW_COMMAND='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
 ######################################################################
 ###GO
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go-1.18
 export PATH=$PATH:$GOROOT/bin
 ###starship
 eval "$(starship init zsh)"
 ###lunarvim
 export PATH="~/.local/bin:$PATH"
+###nvm
+export NVM_DIR="$HOME/.nvm/nvm-0.39.2"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm bash_completion
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
+export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+###java
+#set java env
+export JAVA_HOME=/usr/lib/jdk/jdk1.8.0_351
+export JRE_HOME=${JAVA_HOME}/jre    
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib    
+export PATH=${JAVA_HOME}/bin:$PATH
