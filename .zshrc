@@ -76,7 +76,7 @@ export UPDATE_ZSH_DAYS=31
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting emoji-clock emoji)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting sudo ubuntu emoji-clock emoji)
 # Save the location of the current completion dump file.
 if [ -z "$ZSH_COMPDUMP" ]; then
   ZSH_COMPDUMP="${ZDOTDIR:-${ZSH}}/cache/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
@@ -120,12 +120,11 @@ alias cat='batcat'
 alias diff='delta -n'
 alias du='dust'
 alias df='duf'
-alias grep='rg'
 alias lzd='lazydocker'
 alias tmux="TERM=screen-256color-bce tmux"
+alias j='z'
 # 由于政策原因，所有源自 Debian 的autojump发行版都需要手动激活
-. /usr/share/autojump/autojump.sh
-
+. ~/.config/z/z.sh
 
 #默认使用编辑器
 export EDITOR=/usr/bin/nvim
@@ -163,3 +162,8 @@ export JAVA_HOME=/usr/lib/jdk/jdk1.8.0_351
 export JRE_HOME=${JAVA_HOME}/jre    
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib    
 export PATH=${JAVA_HOME}/bin:$PATH
+###pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_DIR="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

@@ -5,6 +5,7 @@
 ; delta config
 [core]
     pager = delta
+	autocrlf = input
 [interactive]
     diffFilter = delta --color-only --features=interactive
     navigate = true  # use n and N to move between diff sections
