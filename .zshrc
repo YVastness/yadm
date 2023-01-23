@@ -144,16 +144,17 @@ export FZF_COMPLETION_TRIGGER='\'
 export FZF_PREVIEW_COMMAND='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
 ######################################################################
 ###GO
-export GOROOT=/usr/lib/go-1.18
+export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
+export PATH=$HOME/go/bin:$PATH
 ###starship
 eval "$(starship init zsh)"
 ###lunarvim
 export PATH="~/.local/bin:$PATH"
 ###nvm
-export NVM_DIR="$HOME/.nvm/nvm-0.39.2"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
 export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 ###java
