@@ -168,3 +168,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PYENV_DIR="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+###thefuck
+eval $(thefuck --alias)
