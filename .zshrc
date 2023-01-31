@@ -155,8 +155,8 @@ export PATH="~/.local/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
-export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+# export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
+# export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 ###java
 #set java env
 export JAVA_HOME=/usr/lib/jdk/jdk1.8.0_351
@@ -170,3 +170,11 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 ###thefuck
 eval $(thefuck --alias)
+###代理
+## 获取主机 IP
+## 主机 IP 保存在 /etc/resolv.conf 中
+export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+export http_proxy="socks5://${hostip}:10808"
+export https_proxy="socks5://${hostip}:10808"
+export https_proxy="http://${hostip}:10809"
+export http_proxy="http://${hostip}:10809"
