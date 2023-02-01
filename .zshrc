@@ -178,3 +178,5 @@ export http_proxy="socks5://${hostip}:10808"
 export https_proxy="socks5://${hostip}:10808"
 export https_proxy="http://${hostip}:10809"
 export http_proxy="http://${hostip}:10809"
+### yadm and lazygit
+alias yl='lazygit --use-config-file "$HOME/.config/yadm/lazygit.yml,$HOME/.config/lazygit/config.yml" --work-tree ~ --git-dir ~/.local/share/yadm/repo.git'
