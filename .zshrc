@@ -123,6 +123,8 @@ alias df='duf'
 alias lzd='lazydocker'
 alias tmux="TERM=screen-256color-bce tmux"
 alias j='z'
+### yadm and lazygit
+alias ly='lazygit --use-config-file "$HOME/.config/yadm/lazygit.yml,$HOME/.config/lazygit/config.yml" --work-tree ~ --git-dir ~/.local/share/yadm/repo.git'
 # 由于政策原因，所有源自 Debian 的autojump发行版都需要手动激活
 . ~/.config/z/z.sh
 
@@ -155,8 +157,8 @@ export PATH="~/.local/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
-# export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
+export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 ###java
 #set java env
 export JAVA_HOME=/usr/lib/jdk/jdk1.8.0_351
@@ -178,5 +180,3 @@ export http_proxy="socks5://${hostip}:10808"
 export https_proxy="socks5://${hostip}:10808"
 export https_proxy="http://${hostip}:10809"
 export http_proxy="http://${hostip}:10809"
-### yadm and lazygit
-alias yl='lazygit --use-config-file "$HOME/.config/yadm/lazygit.yml,$HOME/.config/lazygit/config.yml" --work-tree ~ --git-dir ~/.local/share/yadm/repo.git'
